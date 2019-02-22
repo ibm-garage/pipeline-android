@@ -4,10 +4,10 @@ This image is deployed to [ibmgarage/pipeline-android](https://hub.docker.com/r/
 
 It includes:
 
-* Oracle Java 8
-* Android SDK
-* Node 8
-* Fastlane
+- Oracle Java 8
+- Android SDK
+- Node 8
+- Fastlane
 
 **NOTE:** you must set `JAVA_HOME` to `/usr/lib/jvm/java-8-oracle` in the pipeline stage to use java (the pipeline overrides the variable set in the Dockerfile).
 
@@ -16,11 +16,10 @@ It includes:
 ```sh
 #!/bin/bash -ex
 
-npm install
-npm test
+npm/yarn install
+npm/yarn test
 
 cd android
-./gradlew assembleRelease
-echo $PLAYSTORE_KEY > playstore.key.json
+
 fastlane alpha
 ```
