@@ -34,3 +34,5 @@ RUN apt-get update
 RUN apt-get install -y ruby2.4 ruby2.4-dev g++ make
 RUN gem install fastlane -NV
 ENV LANG en_US.UTF-8
+
+RUN yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
