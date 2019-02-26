@@ -12,7 +12,7 @@ RUN apt-get install -y curl git unzip oracle-java8-installer
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 #### node ####
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 
 ### yarn ###
